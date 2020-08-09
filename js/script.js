@@ -183,23 +183,24 @@ function check() {
   }
 
   if(good == false) {
-    flashColor();
-    turnCounter.innerHTML = 'А вот и нет...';
-    if (easyButton.checked == true) {
-      setTimeout(() => {
-        playAgain()
-      }, 1500);
-    } else if (middleButton.checked == true) {
-      setTimeout(() => {
-        playAgain()
-      }, 1000);
-    } else if(difficultButton.checked == true) {
-      setTimeout(() => {
-        playAgain()
-      }, 400);
-    }
+    gameOver();
+    // flashColor();
+    // turnCounter.innerHTML = 'А вот и нет...';
+    // if (easyButton.checked == true) {
+    //   setTimeout(() => {
+    //     playAgain()
+    //   }, 1500);
+    // } else if (middleButton.checked == true) {
+    //   setTimeout(() => {
+    //     playAgain()
+    //   }, 1000);
+    // } else if(difficultButton.checked == true) {
+    //   setTimeout(() => {
+    //     playAgain()
+    //   }, 400);
+    // }
 
-    sound = false;
+    // sound = false;
   }
 
   if (turn == playerOrder.length && good && !win) {
@@ -219,10 +220,17 @@ function check() {
   }
 }
 
-function playAgain() {
-  turnCounter.innerHTML = turn;
+// function playAgain() {
+//   turnCounter.innerHTML = turn;
+//   clearColor();
+//   play();
+// }
+
+function gameOver() {
+  turnCounter.innerHTML = '0';
   clearColor();
-  play();
+  on = false;
+  sound = false;
 }
 
 function winGame() {
