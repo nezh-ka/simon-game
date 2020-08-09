@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simon Game</title>
+	<link rel="stylesheet" href="css/style.css">
+	
+	<audio id="clip1">
+  	<source src="sounds/1.mp3"></source>
+  </audio>
+  <audio id="clip2">
+  	<source src="sounds/2.mp3"></source>
+  </audio>
+  <audio id="clip3">
+  	<source src="sounds/3.mp3"></source>
+  </audio>
+  <audio id="clip4">
+  	<source src="sounds/4.mp3"></source>
+  </audio>
+</head>
+<body>
+	<div class="container">
+	<h1>Simon Game</h1>
+		<div class="simon">
+			<ul>
+				<li id="red" class="red"></li>
+				<li id="blue" class="blue"></li>
+				<li id="yellow" class="yellow"></li>
+				<li id="green" class="green"></li>
+			</ul>
+		</div>
+		<div class="game-info">
+			<h2>Раунд: <span id="round">0</span></h2>
+			<button id="start">Начать</button>
+		</div>
+		<div class="game-options">
+			<h2>Уровни игры:</h2>
+			<input type="radio" name="mode" value="easy" id="easy" checked>Легкий<br>
+			<input type="radio" name="mode" value="middle" id="middle">Средний<br>
+			<input type="radio" name="mode" value="difficult" id="difficult">Сложный<br>
+		</div>
+	</div>
+	<div></div>
+	<!-- <footer>
+		Created by Elena Zhuravleva</a>
+	</footer> -->
+  <script src="js/script.js"></script>
+</body>
+</html>
